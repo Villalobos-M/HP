@@ -10,6 +10,7 @@ function getInformacion() {
     fetch( "http://hp-api.herokuapp.com/api/characters/students" ) //peticion
     .then( response => response.json() ) //se retorna la respuesta en forma json
     .then( data => {
+        console.log(data);
         mostrarStudent( data )  //llamar a funcion y pasar info
     })
     .catch( err => console.error(err) ) //Interceptar errores
@@ -28,7 +29,12 @@ function mostrarStudent(array){
 }
 
 function siguienteStudent( evento ) {
-    idStudent = idStudent === 78 ? 1 : idStudent + 1 
+    //idStudent = idStudent === 78 ? 1 : idStudent + 1 
+    if (idStudent == 78) {
+        idStudent = 1
+    }else{
+        idStudent += 1
+    }
 
     getInformacion()
     evento.stopPropagation()

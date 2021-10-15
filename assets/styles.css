@@ -36,7 +36,8 @@ button {
    background-color: rgba(54, 54, 54, 0.726);
    color: rgb(226, 181, 99);
    border-radius: 1rem;
-   width: 3.5rem;
+   width: 4rem;
+   height: 2rem;
    border: 1px solid rgba(37, 37, 37, 0.87);
 }
 #next {
